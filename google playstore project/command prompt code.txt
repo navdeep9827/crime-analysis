@@ -1,0 +1,16 @@
+mysql -u root -p
+SET GLOBAL local_infile=1;
+quit
+mysql --local-infile=1 -u root -p
+
+
+
+
+
+
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\Kuldeep\\Desktop\\project plantix\\login_logs.csv'
+INTO TABLE login_logs
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n' IGNORE 1 ROWS;
